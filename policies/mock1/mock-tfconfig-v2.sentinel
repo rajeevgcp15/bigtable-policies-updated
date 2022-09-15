@@ -1,0 +1,300 @@
+import "strings"
+
+providers = {
+	"google": {
+		"alias": "",
+		"config": {
+			"access_token": {
+				"references": [
+					"var.access_token",
+				],
+			},
+			"project": {
+				"constant_value": "modular-scout-345114",
+			},
+			"region": {
+				"constant_value": "us-central1",
+			},
+		},
+		"full_name":           "registry.terraform.io/hashicorp/google",
+		"module_address":      "",
+		"name":                "google",
+		"provider_config_key": "google",
+		"version_constraint":  "",
+	},
+	"google-beta": {
+		"alias": "",
+		"config": {
+			"access_token": {
+				"references": [
+					"var.access_token",
+				],
+			},
+			"project": {
+				"constant_value": "modular-scout-345114",
+			},
+			"region": {
+				"constant_value": "us-central1",
+			},
+		},
+		"full_name":           "registry.terraform.io/hashicorp/google-beta",
+		"module_address":      "",
+		"name":                "google-beta",
+		"provider_config_key": "google-beta",
+		"version_constraint":  "",
+	},
+}
+
+resources = {
+	"google_bigtable_instance.bt_prod_instance690": {
+		"address": "google_bigtable_instance.bt_prod_instance690",
+		"config": {
+			"cluster": [
+				{
+					"autoscaling_config": [
+						{
+							"cpu_target": {
+								"constant_value": 50,
+							},
+							"max_nodes": {
+								"constant_value": 5,
+							},
+							"min_nodes": {
+								"constant_value": 1,
+							},
+						},
+					],
+					"cluster_id": {
+						"constant_value": "bt-instance-cluster-central",
+					},
+					"storage_type": {
+						"constant_value": "HDD",
+					},
+					"zone": {
+						"constant_value": "us-central1-b",
+					},
+				},
+				{
+					"autoscaling_config": [
+						{
+							"cpu_target": {
+								"constant_value": 50,
+							},
+							"max_nodes": {
+								"constant_value": 5,
+							},
+							"min_nodes": {
+								"constant_value": 1,
+							},
+						},
+					],
+					"cluster_id": {
+						"constant_value": "bt-instance-cluster-east",
+					},
+					"storage_type": {
+						"constant_value": "HDD",
+					},
+					"zone": {
+						"constant_value": "us-east1-b",
+					},
+				},
+			],
+			"deletion_protection": {
+				"constant_value": false,
+			},
+			"name": {
+				"constant_value": "wf-us-prod-bt-00222-100",
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "bt_prod_instance690",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_bigtable_instance",
+	},
+	"google_bigtable_table.table": {
+		"address": "google_bigtable_table.table",
+		"config": {
+			"instance_name": {
+				"references": [
+					"google_bigtable_instance.bt_prod_instance690.name",
+					"google_bigtable_instance.bt_prod_instance690",
+				],
+			},
+			"name": {
+				"constant_value": "wf-us-prod-bt-00222-100",
+			},
+			"split_keys": {
+				"constant_value": [
+					"a",
+					"b",
+					"c",
+				],
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "table",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_bigtable_table",
+	},
+	"google_kms_crypto_key.bt_key690": {
+		"address": "google_kms_crypto_key.bt_key690",
+		"config": {
+			"key_ring": {
+				"references": [
+					"google_kms_key_ring.example-keyring690.id",
+					"google_kms_key_ring.example-keyring690",
+				],
+			},
+			"name": {
+				"constant_value": "wf-us-prod-kms-00222-101",
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "bt_key690",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_kms_crypto_key",
+	},
+	"google_kms_crypto_key.bt_key691": {
+		"address": "google_kms_crypto_key.bt_key691",
+		"config": {
+			"key_ring": {
+				"references": [
+					"google_kms_key_ring.example-keyring691.id",
+					"google_kms_key_ring.example-keyring691",
+				],
+			},
+			"name": {
+				"constant_value": "wf-us-prod-kms-00222-103",
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "bt_key691",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_kms_crypto_key",
+	},
+	"google_kms_key_ring.example-keyring690": {
+		"address": "google_kms_key_ring.example-keyring690",
+		"config": {
+			"location": {
+				"constant_value": "us-central1",
+			},
+			"name": {
+				"constant_value": "wf-us-prod-kms-00222-99",
+			},
+		},
+		"count": {},
+		"depends_on": [
+			"google_project_service.bigtable",
+		],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "example-keyring690",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_kms_key_ring",
+	},
+	"google_kms_key_ring.example-keyring691": {
+		"address": "google_kms_key_ring.example-keyring691",
+		"config": {
+			"location": {
+				"constant_value": "us-east1",
+			},
+			"name": {
+				"constant_value": "wf-us-prod-kms-00222-100",
+			},
+		},
+		"count": {},
+		"depends_on": [
+			"google_project_service.bigtable",
+		],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "example-keyring691",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_kms_key_ring",
+	},
+	"google_project_service.bigtable": {
+		"address": "google_project_service.bigtable",
+		"config": {
+			"disable_on_destroy": {
+				"constant_value": false,
+			},
+			"project": {
+				"references": [
+					"var.project_id",
+				],
+			},
+			"service": {
+				"references": [
+					"each.key",
+				],
+			},
+		},
+		"count":      {},
+		"depends_on": [],
+		"for_each": {
+			"references": [
+				"local.googleapis",
+			],
+		},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "bigtable",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_project_service",
+	},
+}
+
+provisioners = {}
+
+variables = {
+	"access_token": {
+		"default":        null,
+		"description":    "",
+		"module_address": "",
+		"name":           "access_token",
+	},
+	"project_id": {
+		"default":        "modular-scout-345114",
+		"description":    "",
+		"module_address": "",
+		"name":           "project_id",
+	},
+}
+
+outputs = {}
+
+module_calls = {}
+
+strip_index = func(addr) {
+	s = strings.split(addr, ".")
+	for s as i, v {
+		s[i] = strings.split(v, "[")[0]
+	}
+
+	return strings.join(s, ".")
+}

@@ -1,0 +1,613 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"path": [],
+		"resources": {
+			"google_bigtable_instance": {
+				"bt_prod_instance690": {
+					0: {
+						"applied": {
+							"cluster": [
+								{
+									"autoscaling_config": [
+										{
+											"cpu_target": 50,
+											"max_nodes":  5,
+											"min_nodes":  1,
+										},
+									],
+									"cluster_id":   "bt-instance-cluster-central",
+									"storage_type": "HDD",
+									"zone":         "us-central1-b",
+								},
+								{
+									"autoscaling_config": [
+										{
+											"cpu_target": 50,
+											"max_nodes":  5,
+											"min_nodes":  1,
+										},
+									],
+									"cluster_id":   "bt-instance-cluster-east",
+									"storage_type": "HDD",
+									"zone":         "us-east1-b",
+								},
+							],
+							"deletion_protection": false,
+							"instance_type":       "PRODUCTION",
+							"labels":              null,
+							"name":                "wf-us-prod-bt-00222-100",
+						},
+						"destroy": false,
+						"diff": {
+							"cluster.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"cluster.0.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster.0.autoscaling_config.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cluster.0.autoscaling_config.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"cluster.0.autoscaling_config.0.cpu_target": {
+								"computed": false,
+								"new":      "50",
+								"old":      "",
+							},
+							"cluster.0.autoscaling_config.0.max_nodes": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"cluster.0.autoscaling_config.0.min_nodes": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cluster.0.cluster_id": {
+								"computed": false,
+								"new":      "bt-instance-cluster-central",
+								"old":      "",
+							},
+							"cluster.0.kms_key_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster.0.num_nodes": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster.0.storage_type": {
+								"computed": false,
+								"new":      "HDD",
+								"old":      "",
+							},
+							"cluster.0.zone": {
+								"computed": false,
+								"new":      "us-central1-b",
+								"old":      "",
+							},
+							"cluster.1.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster.1.autoscaling_config.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cluster.1.autoscaling_config.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"cluster.1.autoscaling_config.0.cpu_target": {
+								"computed": false,
+								"new":      "50",
+								"old":      "",
+							},
+							"cluster.1.autoscaling_config.0.max_nodes": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"cluster.1.autoscaling_config.0.min_nodes": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cluster.1.cluster_id": {
+								"computed": false,
+								"new":      "bt-instance-cluster-east",
+								"old":      "",
+							},
+							"cluster.1.kms_key_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster.1.num_nodes": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster.1.storage_type": {
+								"computed": false,
+								"new":      "HDD",
+								"old":      "",
+							},
+							"cluster.1.zone": {
+								"computed": false,
+								"new":      "us-east1-b",
+								"old":      "",
+							},
+							"deletion_protection": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"display_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_type": {
+								"computed": false,
+								"new":      "PRODUCTION",
+								"old":      "",
+							},
+							"labels": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "wf-us-prod-bt-00222-100",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"google_bigtable_table": {
+				"table": {
+					0: {
+						"applied": {
+							"column_family": [],
+							"instance_name": "wf-us-prod-bt-00222-100",
+							"name":          "wf-us-prod-bt-00222-100",
+							"split_keys": [
+								"a",
+								"b",
+								"c",
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"column_family.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_name": {
+								"computed": false,
+								"new":      "wf-us-prod-bt-00222-100",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "wf-us-prod-bt-00222-100",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"split_keys.#": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"split_keys.0": {
+								"computed": false,
+								"new":      "a",
+								"old":      "",
+							},
+							"split_keys.1": {
+								"computed": false,
+								"new":      "b",
+								"old":      "",
+							},
+							"split_keys.2": {
+								"computed": false,
+								"new":      "c",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"google_kms_crypto_key": {
+				"bt_key690": {
+					0: {
+						"applied": {
+							"labels":                        null,
+							"name":                          "wf-us-prod-kms-00222-101",
+							"purpose":                       "ENCRYPT_DECRYPT",
+							"rotation_period":               null,
+							"skip_initial_version_creation": null,
+							"timeouts":                      null,
+						},
+						"destroy": false,
+						"diff": {
+							"destroy_scheduled_duration": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"import_only": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_ring": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"labels": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "wf-us-prod-kms-00222-101",
+								"old":      "",
+							},
+							"purpose": {
+								"computed": false,
+								"new":      "ENCRYPT_DECRYPT",
+								"old":      "",
+							},
+							"rotation_period": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"skip_initial_version_creation": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"version_template.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"bt_key691": {
+					0: {
+						"applied": {
+							"labels":                        null,
+							"name":                          "wf-us-prod-kms-00222-103",
+							"purpose":                       "ENCRYPT_DECRYPT",
+							"rotation_period":               null,
+							"skip_initial_version_creation": null,
+							"timeouts":                      null,
+						},
+						"destroy": false,
+						"diff": {
+							"destroy_scheduled_duration": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"import_only": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_ring": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"labels": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "wf-us-prod-kms-00222-103",
+								"old":      "",
+							},
+							"purpose": {
+								"computed": false,
+								"new":      "ENCRYPT_DECRYPT",
+								"old":      "",
+							},
+							"rotation_period": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"skip_initial_version_creation": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"version_template.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"google_kms_key_ring": {
+				"example-keyring690": {
+					0: {
+						"applied": {
+							"location": "us-central1",
+							"name":     "wf-us-prod-kms-00222-99",
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"location": {
+								"computed": false,
+								"new":      "us-central1",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "wf-us-prod-kms-00222-99",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"example-keyring691": {
+					0: {
+						"applied": {
+							"location": "us-east1",
+							"name":     "wf-us-prod-kms-00222-100",
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"location": {
+								"computed": false,
+								"new":      "us-east1",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "wf-us-prod-kms-00222-100",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"google_project_service": {
+				"bigtable": {
+					"bigtable.googleapis.com": {
+						"applied": {
+							"disable_dependent_services": null,
+							"disable_on_destroy":         false,
+							"project":                    "modular-scout-345114",
+							"service":                    "bigtable.googleapis.com",
+							"timeouts":                   null,
+						},
+						"destroy": false,
+						"diff": {
+							"disable_dependent_services": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"disable_on_destroy": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"project": {
+								"computed": false,
+								"new":      "modular-scout-345114",
+								"old":      "",
+							},
+							"service": {
+								"computed": false,
+								"new":      "bigtable.googleapis.com",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+					"cloudkms.googleapis.com": {
+						"applied": {
+							"disable_dependent_services": null,
+							"disable_on_destroy":         false,
+							"project":                    "modular-scout-345114",
+							"service":                    "cloudkms.googleapis.com",
+							"timeouts":                   null,
+						},
+						"destroy": false,
+						"diff": {
+							"disable_dependent_services": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"disable_on_destroy": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"project": {
+								"computed": false,
+								"new":      "modular-scout-345114",
+								"old":      "",
+							},
+							"service": {
+								"computed": false,
+								"new":      "cloudkms.googleapis.com",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+terraform_version = "1.2.8"
+
+variables = {
+	"access_token": "REDACTED_SENSITIVE",
+	"project_id":   "modular-scout-345114",
+}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

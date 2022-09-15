@@ -1,0 +1,1237 @@
+terraform_version = "1.2.8"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"google_bigtable_instance.bt_prod_instance690": {
+			"address":        "google_bigtable_instance.bt_prod_instance690",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "bt_prod_instance690",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_bigtable_instance",
+			"values": {
+				"cluster": [
+					{
+						"autoscaling_config": [
+							{
+								"cpu_target": 50,
+								"max_nodes":  5,
+								"min_nodes":  1,
+							},
+						],
+						"cluster_id":   "bt-instance-cluster-central",
+						"storage_type": "HDD",
+						"zone":         "us-central1-b",
+					},
+					{
+						"autoscaling_config": [
+							{
+								"cpu_target": 50,
+								"max_nodes":  5,
+								"min_nodes":  1,
+							},
+						],
+						"cluster_id":   "bt-instance-cluster-east",
+						"storage_type": "HDD",
+						"zone":         "us-east1-b",
+					},
+				],
+				"deletion_protection": false,
+				"instance_type":       "PRODUCTION",
+				"labels":              null,
+				"name":                "wf-us-prod-bt-00222-100",
+			},
+		},
+		"google_bigtable_table.table": {
+			"address":        "google_bigtable_table.table",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "table",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_bigtable_table",
+			"values": {
+				"column_family": [],
+				"instance_name": "wf-us-prod-bt-00222-100",
+				"name":          "wf-us-prod-bt-00222-100",
+				"split_keys": [
+					"a",
+					"b",
+					"c",
+				],
+			},
+		},
+		"google_kms_crypto_key.bt_key690": {
+			"address":        "google_kms_crypto_key.bt_key690",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "bt_key690",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_kms_crypto_key",
+			"values": {
+				"labels":                        null,
+				"name":                          "wf-us-prod-kms-00222-101",
+				"purpose":                       "ENCRYPT_DECRYPT",
+				"rotation_period":               null,
+				"skip_initial_version_creation": null,
+				"timeouts":                      null,
+			},
+		},
+		"google_kms_crypto_key.bt_key691": {
+			"address":        "google_kms_crypto_key.bt_key691",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "bt_key691",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_kms_crypto_key",
+			"values": {
+				"labels":                        null,
+				"name":                          "wf-us-prod-kms-00222-103",
+				"purpose":                       "ENCRYPT_DECRYPT",
+				"rotation_period":               null,
+				"skip_initial_version_creation": null,
+				"timeouts":                      null,
+			},
+		},
+		"google_kms_key_ring.example-keyring690": {
+			"address":        "google_kms_key_ring.example-keyring690",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "example-keyring690",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_kms_key_ring",
+			"values": {
+				"location": "us-central1",
+				"name":     "wf-us-prod-kms-00222-99",
+				"timeouts": null,
+			},
+		},
+		"google_kms_key_ring.example-keyring691": {
+			"address":        "google_kms_key_ring.example-keyring691",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "example-keyring691",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_kms_key_ring",
+			"values": {
+				"location": "us-east1",
+				"name":     "wf-us-prod-kms-00222-100",
+				"timeouts": null,
+			},
+		},
+		"google_project_service.bigtable[\"bigtable.googleapis.com\"]": {
+			"address":        "google_project_service.bigtable[\"bigtable.googleapis.com\"]",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          "bigtable.googleapis.com",
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "bigtable",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_project_service",
+			"values": {
+				"disable_dependent_services": null,
+				"disable_on_destroy":         false,
+				"project":                    "modular-scout-345114",
+				"service":                    "bigtable.googleapis.com",
+				"timeouts":                   null,
+			},
+		},
+		"google_project_service.bigtable[\"cloudkms.googleapis.com\"]": {
+			"address":        "google_project_service.bigtable[\"cloudkms.googleapis.com\"]",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          "cloudkms.googleapis.com",
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "bigtable",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_project_service",
+			"values": {
+				"disable_dependent_services": null,
+				"disable_on_destroy":         false,
+				"project":                    "modular-scout-345114",
+				"service":                    "cloudkms.googleapis.com",
+				"timeouts":                   null,
+			},
+		},
+	},
+}
+
+variables = {
+	"access_token": {
+		"name":  "access_token",
+		"value": "REDACTED_SENSITIVE",
+	},
+	"project_id": {
+		"name":  "project_id",
+		"value": "modular-scout-345114",
+	},
+}
+
+resource_changes = {
+	"google_bigtable_instance.bt_prod_instance690": {
+
+		"address": "google_bigtable_instance.bt_prod_instance690",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"cluster": [
+					{
+						"autoscaling_config": [
+							{
+								"cpu_target": 50,
+								"max_nodes":  5,
+								"min_nodes":  1,
+							},
+						],
+						"cluster_id":   "bt-instance-cluster-central1",
+						"storage_type": "HDD",
+						"zone":         "us-central1-a",
+					},
+					{
+						"autoscaling_config": [
+							{
+								"cpu_target": 50,
+								"max_nodes":  5,
+								"min_nodes":  1,
+							},
+						],
+						"cluster_id":   "bt-instance-cluster-central2",
+						"storage_type": "HDD",
+						"zone":         "us-east1-c",
+					},
+					{
+						"autoscaling_config": [
+							{
+								"cpu_target": 50,
+								"max_nodes":  5,
+								"min_nodes":  1,
+							},
+						],
+						"cluster_id":   "bt-instance-cluster-central3",
+						"storage_type": "HDD",
+						"zone":         "us-central1-b",
+					},
+				],
+				"deletion_protection": false,
+				"instance_type":       "PRODUCTION",
+				"labels":              null,
+				"name":                "wf-us-prod-bt-00222-100",
+			},
+			"after_unknown": {
+				"cluster": [
+					{
+						"autoscaling_config": [
+							{},
+						],
+						"kms_key_name": true,
+						"num_nodes":    true,
+					},
+					{
+						"autoscaling_config": [
+							{},
+						],
+						"kms_key_name": true,
+						"num_nodes":    true,
+					},
+				],
+				"display_name": true,
+				"id":           true,
+				"project":      true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "bt_prod_instance690",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_bigtable_instance",
+	},
+	"google_bigtable_table.table": {
+		"address": "google_bigtable_table.table",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"column_family": [],
+				"instance_name": "wf-us-prod-bt-00222-100",
+				"name":          "wf-us-prod-bt-00222-100",
+				"split_keys": [
+					"a",
+					"b",
+					"c",
+				],
+			},
+			"after_unknown": {
+				"column_family": [],
+				"id":            true,
+				"project":       true,
+				"split_keys": [
+					false,
+					false,
+					false,
+				],
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "table",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_bigtable_table",
+	},
+	"google_kms_crypto_key.bt_key690": {
+		"address": "google_kms_crypto_key.bt_key690",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"labels":                        null,
+				"name":                          "wf-us-prod-kms-00222-101",
+				"purpose":                       "ENCRYPT_DECRYPT",
+				"rotation_period":               null,
+				"skip_initial_version_creation": null,
+				"timeouts":                      null,
+			},
+			"after_unknown": {
+				"destroy_scheduled_duration": true,
+				"id":               true,
+				"import_only":      true,
+				"key_ring":         true,
+				"version_template": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "bt_key690",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_kms_crypto_key",
+	},
+	"google_kms_crypto_key.bt_key691": {
+		"address": "google_kms_crypto_key.bt_key691",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"labels":                        null,
+				"name":                          "wf-us-prod-kms-00222-103",
+				"purpose":                       "ENCRYPT_DECRYPT",
+				"rotation_period":               null,
+				"skip_initial_version_creation": null,
+				"timeouts":                      null,
+			},
+			"after_unknown": {
+				"destroy_scheduled_duration": true,
+				"id":               true,
+				"import_only":      true,
+				"key_ring":         true,
+				"version_template": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "bt_key691",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_kms_crypto_key",
+	},
+	"google_kms_key_ring.example-keyring690": {
+		"address": "google_kms_key_ring.example-keyring690",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"location": "us-central1",
+				"name":     "wf-us-prod-kms-00222-99",
+				"timeouts": null,
+			},
+			"after_unknown": {
+				"id":      true,
+				"project": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "example-keyring690",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_kms_key_ring",
+	},
+	"google_kms_key_ring.example-keyring691": {
+		"address": "google_kms_key_ring.example-keyring691",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"location": "us-east1",
+				"name":     "wf-us-prod-kms-00222-100",
+				"timeouts": null,
+			},
+			"after_unknown": {
+				"id":      true,
+				"project": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "example-keyring691",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_kms_key_ring",
+	},
+	"google_project_service.bigtable[\"bigtable.googleapis.com\"]": {
+		"address": "google_project_service.bigtable[\"bigtable.googleapis.com\"]",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"disable_dependent_services": null,
+				"disable_on_destroy":         false,
+				"project":                    "modular-scout-345114",
+				"service":                    "bigtable.googleapis.com",
+				"timeouts":                   null,
+			},
+			"after_unknown": {
+				"id": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          "bigtable.googleapis.com",
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "bigtable",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_project_service",
+	},
+	"google_project_service.bigtable[\"cloudkms.googleapis.com\"]": {
+		"address": "google_project_service.bigtable[\"cloudkms.googleapis.com\"]",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"disable_dependent_services": null,
+				"disable_on_destroy":         false,
+				"project":                    "modular-scout-345114",
+				"service":                    "cloudkms.googleapis.com",
+				"timeouts":                   null,
+			},
+			"after_unknown": {
+				"id": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          "cloudkms.googleapis.com",
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "bigtable",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_project_service",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"google": {
+				"expressions": {
+					"access_token": {
+						"references": [
+							"var.access_token",
+						],
+					},
+					"project": {
+						"constant_value": "modular-scout-345114",
+					},
+					"region": {
+						"constant_value": "us-central1",
+					},
+				},
+				"full_name": "registry.terraform.io/hashicorp/google",
+				"name":      "google",
+			},
+			"google-beta": {
+				"expressions": {
+					"access_token": {
+						"references": [
+							"var.access_token",
+						],
+					},
+					"project": {
+						"constant_value": "modular-scout-345114",
+					},
+					"region": {
+						"constant_value": "us-central1",
+					},
+				},
+				"full_name": "registry.terraform.io/hashicorp/google-beta",
+				"name":      "google-beta",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "google_bigtable_instance.bt_prod_instance690",
+					"expressions": {
+						"cluster": [
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": {
+											"constant_value": 50,
+										},
+										"max_nodes": {
+											"constant_value": 5,
+										},
+										"min_nodes": {
+											"constant_value": 1,
+										},
+									},
+								],
+								"cluster_id": {
+									"constant_value": "bt-instance-cluster-central",
+								},
+								"storage_type": {
+									"constant_value": "HDD",
+								},
+								"zone": {
+									"constant_value": "us-central1-b",
+								},
+							},
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": {
+											"constant_value": 50,
+										},
+										"max_nodes": {
+											"constant_value": 5,
+										},
+										"min_nodes": {
+											"constant_value": 1,
+										},
+									},
+								],
+								"cluster_id": {
+									"constant_value": "bt-instance-cluster-east",
+								},
+								"storage_type": {
+									"constant_value": "HDD",
+								},
+								"zone": {
+									"constant_value": "us-east1-b",
+								},
+							},
+						],
+						"deletion_protection": {
+							"constant_value": false,
+						},
+						"name": {
+							"constant_value": "wf-us-prod-bt-00222-100",
+						},
+					},
+					"mode":                "managed",
+					"name":                "bt_prod_instance690",
+					"provider_config_key": "google",
+					"schema_version":      1,
+					"type":                "google_bigtable_instance",
+				},
+				{
+					"address": "google_bigtable_table.table",
+					"expressions": {
+						"instance_name": {
+							"references": [
+								"google_bigtable_instance.bt_prod_instance690.name",
+								"google_bigtable_instance.bt_prod_instance690",
+							],
+						},
+						"name": {
+							"constant_value": "wf-us-prod-bt-00222-100",
+						},
+						"split_keys": {
+							"constant_value": [
+								"a",
+								"b",
+								"c",
+							],
+						},
+					},
+					"mode":                "managed",
+					"name":                "table",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_bigtable_table",
+				},
+				{
+					"address": "google_kms_crypto_key.bt_key690",
+					"expressions": {
+						"key_ring": {
+							"references": [
+								"google_kms_key_ring.example-keyring690.id",
+								"google_kms_key_ring.example-keyring690",
+							],
+						},
+						"name": {
+							"constant_value": "wf-us-prod-kms-00222-101",
+						},
+					},
+					"mode":                "managed",
+					"name":                "bt_key690",
+					"provider_config_key": "google",
+					"schema_version":      1,
+					"type":                "google_kms_crypto_key",
+				},
+				{
+					"address": "google_kms_crypto_key.bt_key691",
+					"expressions": {
+						"key_ring": {
+							"references": [
+								"google_kms_key_ring.example-keyring691.id",
+								"google_kms_key_ring.example-keyring691",
+							],
+						},
+						"name": {
+							"constant_value": "wf-us-prod-kms-00222-103",
+						},
+					},
+					"mode":                "managed",
+					"name":                "bt_key691",
+					"provider_config_key": "google",
+					"schema_version":      1,
+					"type":                "google_kms_crypto_key",
+				},
+				{
+					"address": "google_kms_key_ring.example-keyring690",
+					"depends_on": [
+						"google_project_service.bigtable",
+					],
+					"expressions": {
+						"location": {
+							"constant_value": "us-central1",
+						},
+						"name": {
+							"constant_value": "wf-us-prod-kms-00222-99",
+						},
+					},
+					"mode":                "managed",
+					"name":                "example-keyring690",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_kms_key_ring",
+				},
+				{
+					"address": "google_kms_key_ring.example-keyring691",
+					"depends_on": [
+						"google_project_service.bigtable",
+					],
+					"expressions": {
+						"location": {
+							"constant_value": "us-east1",
+						},
+						"name": {
+							"constant_value": "wf-us-prod-kms-00222-100",
+						},
+					},
+					"mode":                "managed",
+					"name":                "example-keyring691",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_kms_key_ring",
+				},
+				{
+					"address": "google_project_service.bigtable",
+					"expressions": {
+						"disable_on_destroy": {
+							"constant_value": false,
+						},
+						"project": {
+							"references": [
+								"var.project_id",
+							],
+						},
+						"service": {
+							"references": [
+								"each.key",
+							],
+						},
+					},
+					"for_each_expression": {
+						"references": [
+							"local.googleapis",
+						],
+					},
+					"mode":                "managed",
+					"name":                "bigtable",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_project_service",
+				},
+			],
+			"variables": {
+				"access_token": {
+					"sensitive": true,
+				},
+				"project_id": {
+					"default": "modular-scout-345114",
+				},
+			},
+		},
+	},
+	"format_version": "1.1",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "google_bigtable_instance.bt_prod_instance690",
+					"mode":           "managed",
+					"name":           "bt_prod_instance690",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 1,
+					"sensitive_values": {
+						"cluster": [
+							{
+								"autoscaling_config": [
+									{},
+								],
+							},
+							{
+								"autoscaling_config": [
+									{},
+								],
+							},
+						],
+					},
+					"type": "google_bigtable_instance",
+					"values": {
+						"cluster": [
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": 50,
+										"max_nodes":  5,
+										"min_nodes":  1,
+									},
+								],
+								"cluster_id":   "bt-instance-cluster-central",
+								"storage_type": "HDD",
+								"zone":         "us-central1-b",
+							},
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": 50,
+										"max_nodes":  5,
+										"min_nodes":  1,
+									},
+								],
+								"cluster_id":   "bt-instance-cluster-east",
+								"storage_type": "HDD",
+								"zone":         "us-east1-b",
+							},
+						],
+						"deletion_protection": false,
+						"instance_type":       "PRODUCTION",
+						"labels":              null,
+						"name":                "wf-us-prod-bt-00222-100",
+					},
+				},
+				{
+					"address":        "google_bigtable_table.table",
+					"mode":           "managed",
+					"name":           "table",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 0,
+					"sensitive_values": {
+						"column_family": [],
+						"split_keys": [
+							false,
+							false,
+							false,
+						],
+					},
+					"type": "google_bigtable_table",
+					"values": {
+						"column_family": [],
+						"instance_name": "wf-us-prod-bt-00222-100",
+						"name":          "wf-us-prod-bt-00222-100",
+						"split_keys": [
+							"a",
+							"b",
+							"c",
+						],
+					},
+				},
+				{
+					"address":        "google_kms_crypto_key.bt_key690",
+					"mode":           "managed",
+					"name":           "bt_key690",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 1,
+					"sensitive_values": {
+						"version_template": [],
+					},
+					"type": "google_kms_crypto_key",
+					"values": {
+						"labels":                        null,
+						"name":                          "wf-us-prod-kms-00222-101",
+						"purpose":                       "ENCRYPT_DECRYPT",
+						"rotation_period":               null,
+						"skip_initial_version_creation": null,
+						"timeouts":                      null,
+					},
+				},
+				{
+					"address":        "google_kms_crypto_key.bt_key691",
+					"mode":           "managed",
+					"name":           "bt_key691",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 1,
+					"sensitive_values": {
+						"version_template": [],
+					},
+					"type": "google_kms_crypto_key",
+					"values": {
+						"labels":                        null,
+						"name":                          "wf-us-prod-kms-00222-103",
+						"purpose":                       "ENCRYPT_DECRYPT",
+						"rotation_period":               null,
+						"skip_initial_version_creation": null,
+						"timeouts":                      null,
+					},
+				},
+				{
+					"address":          "google_kms_key_ring.example-keyring690",
+					"mode":             "managed",
+					"name":             "example-keyring690",
+					"provider_name":    "registry.terraform.io/hashicorp/google",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "google_kms_key_ring",
+					"values": {
+						"location": "us-central1",
+						"name":     "wf-us-prod-kms-00222-99",
+						"timeouts": null,
+					},
+				},
+				{
+					"address":          "google_kms_key_ring.example-keyring691",
+					"mode":             "managed",
+					"name":             "example-keyring691",
+					"provider_name":    "registry.terraform.io/hashicorp/google",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "google_kms_key_ring",
+					"values": {
+						"location": "us-east1",
+						"name":     "wf-us-prod-kms-00222-100",
+						"timeouts": null,
+					},
+				},
+				{
+					"address":          "google_project_service.bigtable[\"bigtable.googleapis.com\"]",
+					"index":            "bigtable.googleapis.com",
+					"mode":             "managed",
+					"name":             "bigtable",
+					"provider_name":    "registry.terraform.io/hashicorp/google",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "google_project_service",
+					"values": {
+						"disable_dependent_services": null,
+						"disable_on_destroy":         false,
+						"project":                    "modular-scout-345114",
+						"service":                    "bigtable.googleapis.com",
+						"timeouts":                   null,
+					},
+				},
+				{
+					"address":          "google_project_service.bigtable[\"cloudkms.googleapis.com\"]",
+					"index":            "cloudkms.googleapis.com",
+					"mode":             "managed",
+					"name":             "bigtable",
+					"provider_name":    "registry.terraform.io/hashicorp/google",
+					"schema_version":   0,
+					"sensitive_values": {},
+					"type":             "google_project_service",
+					"values": {
+						"disable_dependent_services": null,
+						"disable_on_destroy":         false,
+						"project":                    "modular-scout-345114",
+						"service":                    "cloudkms.googleapis.com",
+						"timeouts":                   null,
+					},
+				},
+			],
+		},
+	},
+	"relevant_attributes": [
+		{
+			"attribute": [
+				"name",
+			],
+			"resource": "google_bigtable_instance.bt_prod_instance690",
+		},
+		{
+			"attribute": [
+				"id",
+			],
+			"resource": "google_kms_key_ring.example-keyring691",
+		},
+		{
+			"attribute": [
+				"id",
+			],
+			"resource": "google_kms_key_ring.example-keyring690",
+		},
+	],
+	"resource_changes": [
+		{
+			"address": "google_bigtable_instance.bt_prod_instance690",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"cluster": [
+						{
+							"autoscaling_config": [
+								{
+									"cpu_target": 50,
+									"max_nodes":  5,
+									"min_nodes":  1,
+								},
+							],
+							"cluster_id":   "bt-instance-cluster-central",
+							"storage_type": "HDD",
+							"zone":         "us-central1-b",
+						},
+						{
+							"autoscaling_config": [
+								{
+									"cpu_target": 50,
+									"max_nodes":  5,
+									"min_nodes":  1,
+								},
+							],
+							"cluster_id":   "bt-instance-cluster-east",
+							"storage_type": "HDD",
+							"zone":         "us-east1-b",
+						},
+					],
+					"deletion_protection": false,
+					"instance_type":       "PRODUCTION",
+					"labels":              null,
+					"name":                "wf-us-prod-bt-00222-100",
+				},
+				"after_sensitive": {
+					"cluster": [
+						{
+							"autoscaling_config": [
+								{},
+							],
+						},
+						{
+							"autoscaling_config": [
+								{},
+							],
+						},
+					],
+				},
+				"after_unknown": {
+					"cluster": [
+						{
+							"autoscaling_config": [
+								{},
+							],
+							"kms_key_name": true,
+							"num_nodes":    true,
+						},
+						{
+							"autoscaling_config": [
+								{},
+							],
+							"kms_key_name": true,
+							"num_nodes":    true,
+						},
+					],
+					"display_name": true,
+					"id":           true,
+					"project":      true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "bt_prod_instance690",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_bigtable_instance",
+		},
+		{
+			"address": "google_bigtable_table.table",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"column_family": [],
+					"instance_name": "wf-us-prod-bt-00222-100",
+					"name":          "wf-us-prod-bt-00222-100",
+					"split_keys": [
+						"a",
+						"b",
+						"c",
+					],
+				},
+				"after_sensitive": {
+					"column_family": [],
+					"split_keys": [
+						false,
+						false,
+						false,
+					],
+				},
+				"after_unknown": {
+					"column_family": [],
+					"id":            true,
+					"project":       true,
+					"split_keys": [
+						false,
+						false,
+						false,
+					],
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "table",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_bigtable_table",
+		},
+		{
+			"address": "google_kms_crypto_key.bt_key690",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"labels":                        null,
+					"name":                          "wf-us-prod-kms-00222-101",
+					"purpose":                       "ENCRYPT_DECRYPT",
+					"rotation_period":               null,
+					"skip_initial_version_creation": null,
+					"timeouts":                      null,
+				},
+				"after_sensitive": {
+					"version_template": [],
+				},
+				"after_unknown": {
+					"destroy_scheduled_duration": true,
+					"id":               true,
+					"import_only":      true,
+					"key_ring":         true,
+					"version_template": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "bt_key690",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_kms_crypto_key",
+		},
+		{
+			"address": "google_kms_crypto_key.bt_key691",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"labels":                        null,
+					"name":                          "wf-us-prod-kms-00222-103",
+					"purpose":                       "ENCRYPT_DECRYPT",
+					"rotation_period":               null,
+					"skip_initial_version_creation": null,
+					"timeouts":                      null,
+				},
+				"after_sensitive": {
+					"version_template": [],
+				},
+				"after_unknown": {
+					"destroy_scheduled_duration": true,
+					"id":               true,
+					"import_only":      true,
+					"key_ring":         true,
+					"version_template": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "bt_key691",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_kms_crypto_key",
+		},
+		{
+			"address": "google_kms_key_ring.example-keyring690",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"location": "us-central1",
+					"name":     "wf-us-prod-kms-00222-99",
+					"timeouts": null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"id":      true,
+					"project": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "example-keyring690",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_kms_key_ring",
+		},
+		{
+			"address": "google_kms_key_ring.example-keyring691",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"location": "us-east1",
+					"name":     "wf-us-prod-kms-00222-100",
+					"timeouts": null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"id":      true,
+					"project": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "example-keyring691",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_kms_key_ring",
+		},
+		{
+			"address": "google_project_service.bigtable[\"bigtable.googleapis.com\"]",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"disable_dependent_services": null,
+					"disable_on_destroy":         false,
+					"project":                    "modular-scout-345114",
+					"service":                    "bigtable.googleapis.com",
+					"timeouts":                   null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"id": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"index":         "bigtable.googleapis.com",
+			"mode":          "managed",
+			"name":          "bigtable",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_project_service",
+		},
+		{
+			"address": "google_project_service.bigtable[\"cloudkms.googleapis.com\"]",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"disable_dependent_services": null,
+					"disable_on_destroy":         false,
+					"project":                    "modular-scout-345114",
+					"service":                    "cloudkms.googleapis.com",
+					"timeouts":                   null,
+				},
+				"after_sensitive": {},
+				"after_unknown": {
+					"id": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"index":         "cloudkms.googleapis.com",
+			"mode":          "managed",
+			"name":          "bigtable",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_project_service",
+		},
+	],
+	"terraform_version": "1.2.8",
+	"variables": {
+		"access_token": {
+			"value": "REDACTED_SENSITIVE",
+		},
+		"project_id": {
+			"value": "modular-scout-345114",
+		},
+	},
+}

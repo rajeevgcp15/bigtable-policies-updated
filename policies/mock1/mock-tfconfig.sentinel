@@ -1,0 +1,268 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data":    {},
+		"modules": {},
+		"outputs": {},
+		"providers": {
+			"google": {
+				"alias": {
+					"": {
+						"config": {
+							"project": "modular-scout-345114",
+							"region":  "us-central1",
+						},
+						"references": {
+							"access_token": [
+								"var.access_token",
+							],
+							"project": [],
+							"region":  [],
+						},
+						"version": "",
+					},
+				},
+				"config": {
+					"project": "modular-scout-345114",
+					"region":  "us-central1",
+				},
+				"references": {
+					"access_token": [
+						"var.access_token",
+					],
+					"project": [],
+					"region":  [],
+				},
+				"version": "",
+			},
+			"google-beta": {
+				"alias": {
+					"": {
+						"config": {
+							"project": "modular-scout-345114",
+							"region":  "us-central1",
+						},
+						"references": {
+							"access_token": [
+								"var.access_token",
+							],
+							"project": [],
+							"region":  [],
+						},
+						"version": "",
+					},
+				},
+				"config": {
+					"project": "modular-scout-345114",
+					"region":  "us-central1",
+				},
+				"references": {
+					"access_token": [
+						"var.access_token",
+					],
+					"project": [],
+					"region":  [],
+				},
+				"version": "",
+			},
+		},
+		"resources": {
+			"google_bigtable_instance": {
+				"bt_prod_instance690": {
+					"config": {
+						"cluster": [
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": 50,
+										"max_nodes":  5,
+										"min_nodes":  1,
+									},
+								],
+								"cluster_id":   "bt-instance-cluster-central",
+								"storage_type": "HDD",
+								"zone":         "us-central1-b",
+							},
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": 50,
+										"max_nodes":  5,
+										"min_nodes":  1,
+									},
+								],
+								"cluster_id":   "bt-instance-cluster-east",
+								"storage_type": "HDD",
+								"zone":         "us-east1-b",
+							},
+						],
+						"deletion_protection": false,
+						"name":                "wf-us-prod-bt-00222-100",
+					},
+					"provisioners": null,
+					"references": {
+						"cluster": [
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": [],
+										"max_nodes":  [],
+										"min_nodes":  [],
+									},
+								],
+								"cluster_id":   [],
+								"storage_type": [],
+								"zone":         [],
+							},
+							{
+								"autoscaling_config": [
+									{
+										"cpu_target": [],
+										"max_nodes":  [],
+										"min_nodes":  [],
+									},
+								],
+								"cluster_id":   [],
+								"storage_type": [],
+								"zone":         [],
+							},
+						],
+						"deletion_protection": [],
+						"name":                [],
+					},
+				},
+			},
+			"google_bigtable_table": {
+				"table": {
+					"config": {
+						"name": "wf-us-prod-bt-00222-100",
+						"split_keys": [
+							"a",
+							"b",
+							"c",
+						],
+					},
+					"provisioners": null,
+					"references": {
+						"instance_name": [
+							"google_bigtable_instance.bt_prod_instance690.name",
+							"google_bigtable_instance.bt_prod_instance690",
+						],
+						"name":       [],
+						"split_keys": [],
+					},
+				},
+			},
+			"google_kms_crypto_key": {
+				"bt_key690": {
+					"config": {
+						"name": "wf-us-prod-kms-00222-101",
+					},
+					"provisioners": null,
+					"references": {
+						"key_ring": [
+							"google_kms_key_ring.example-keyring690.id",
+							"google_kms_key_ring.example-keyring690",
+						],
+						"name": [],
+					},
+				},
+				"bt_key691": {
+					"config": {
+						"name": "wf-us-prod-kms-00222-103",
+					},
+					"provisioners": null,
+					"references": {
+						"key_ring": [
+							"google_kms_key_ring.example-keyring691.id",
+							"google_kms_key_ring.example-keyring691",
+						],
+						"name": [],
+					},
+				},
+			},
+			"google_kms_key_ring": {
+				"example-keyring690": {
+					"config": {
+						"location": "us-central1",
+						"name":     "wf-us-prod-kms-00222-99",
+					},
+					"provisioners": null,
+					"references": {
+						"location": [],
+						"name":     [],
+					},
+				},
+				"example-keyring691": {
+					"config": {
+						"location": "us-east1",
+						"name":     "wf-us-prod-kms-00222-100",
+					},
+					"provisioners": null,
+					"references": {
+						"location": [],
+						"name":     [],
+					},
+				},
+			},
+			"google_project_service": {
+				"bigtable": {
+					"config": {
+						"disable_on_destroy": false,
+					},
+					"provisioners": null,
+					"references": {
+						"disable_on_destroy": [],
+						"project": [
+							"var.project_id",
+						],
+						"service": [
+							"each.key",
+						],
+					},
+				},
+			},
+		},
+		"variables": {
+			"access_token": {
+				"default":     null,
+				"description": "",
+			},
+			"project_id": {
+				"default":     "modular-scout-345114",
+				"description": "",
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+modules = _modules.root.modules
+providers = _modules.root.providers
+resources = _modules.root.resources
+variables = _modules.root.variables
+outputs = _modules.root.outputs
