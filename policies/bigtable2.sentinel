@@ -129,7 +129,6 @@ prod_func = func(address, rc, bt_instance_name) {
 			print("Please distribute clusters evenly across regions/zones")
 			print("Your Region counts are :" + plan.to_string(region_count_map))
 			messages_bt[address] = rc
-			//call_allowed_region_function = allowed_region_func(unique_region_array, region_array, messages_bt, address, rc)
 		} else {
 			call_allowed_region_function = allowed_region_func(unique_region_array, region_array, messages_bt, address, rc)
 		}

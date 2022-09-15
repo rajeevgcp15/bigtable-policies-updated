@@ -148,10 +148,11 @@ non_prod_func = func(address, rc, bt_instance_name) {
 		}
 
 	}
-	print("locations :===>" + plan.to_string(locations))
-	print("Unique locations count :===>" + plan.to_string(unique_locations_count))
-	print("Region_Array :===>" + plan.to_string(region_array))
-	print("Cluster Count :===>" + plan.to_string(cluster_count))
+	//print("locations  :===>" + plan.to_string(locations_orig))
+	//print("locations without Duplicates :===>" + plan.to_string(locations))
+	//print("Unique locations count :===>" + plan.to_string(unique_locations_count))
+	//print("Region_Array :===>" + plan.to_string(region_array))
+	//print("Cluster Count :===>" + plan.to_string(cluster_count))
 	if (cluster_count < 2) {
 		print("Please Define Minimum 2 clusters for resource : " + address + " For High Availability")
 		messages_bt_non_prod[address] = rc
@@ -160,13 +161,16 @@ non_prod_func = func(address, rc, bt_instance_name) {
 			print("Please Select different locations for clusters for resource : " + address + " For High Availability")
 			messages_bt_non_prod[address] = rc
 		} else {
+			message_holder = 0
 			for region_array as lpp, rttt {
 				if rttt not in bigtable_allowed_region {
-					print("Please select region from allowed regions for resource " + address + " .Allowed regions are: " + plan.to_string(bigtable_allowed_region))
-					print("Your Selected regions are : " + plan.to_string(region_array))
+					message_holder = 1
 					messages_bt_non_prod[address] = rc
-
 				}
+			}
+			if message_holder == 1 {
+				print("Please select region from allowed regions for resource " + address + " .Allowed regions are: " + plan.to_string(bigtable_allowed_region))
+				print("Your Selected regions are : " + plan.to_string(region_array))
 			}
 		}
 	}
