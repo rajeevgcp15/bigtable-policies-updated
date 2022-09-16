@@ -1,0 +1,187 @@
+import "tfplan-functions" as plan
+import "strings"
+import "types"
+
+allBigtableInstances = plan.find_resources("google_bigtable_instance")
+
+messages_bt_cluster_main = {}
+
+bigtable_instance_classification_map = {}
+for allBigtableInstances as address, rc {
+	bigtable_instance_name = plan.evaluate_attribute(rc, "name")
+	is_bigtable_instance_prod = rule { bigtable_instance_name contains "prod" and bigtable_instance_name not contains "nonprod" }
+	if is_bigtable_instance_prod {
+		bigtable_instance_classification_map[bigtable_instance_name] = "prod"
+	} else {
+		bigtable_instance_classification_map[bigtable_instance_name] = "non-prod"
+	}
+}
+
+print("Bigtable_instance_name_prod_map :==> " + plan.to_string(bigtable_instance_classification_map))
+
+bt_cluster_zone_map_func = func(address, rc, bt_instance_name) {
+
+	bt_cluster = plan.evaluate_attribute(rc.change.after, "cluster")
+	bt_cluster_zone_map = {}
+	for bt_cluster as add, rt {
+		cluster_id = plan.evaluate_attribute(rt, "cluster_id")
+		cluster_zone = plan.evaluate_attribute(rt, "zone")
+		if (types.type_of(cluster_zone) is "undefined" or types.type_of(cluster_zone) is "null") {
+			print("Print Define Zone for the Bigtable cluster with Cluster_ID : " + cluster_id + " for resource " + address)
+			print("Zone Can't be null")
+			messages_bt_cluster_main[address] = rc
+
+		} else {
+			bt_cluster_zone_map[cluster_id] = cluster_zone
+		}
+	}
+	return bt_cluster_zone_map
+
+}
+
+allowed_region_func = func(unique_region_array, region_array, messages_bt, address, rc) {
+
+	var_temp = 0
+	for unique_region_array as lp, rs {
+		region_arr = strings.split(rs, "-")
+		if region_arr[0] != "us" {
+			var_temp = 1
+			messages_bt[address] = rc
+		}
+	}
+	if var_temp == 1 {
+		print("Please select \"us-\" region for resource " + address + " For cluster deployments. Zones should be in \"us-\"  region only")
+		print("Your Selected regions are : " + plan.to_string(region_array))
+
+	}
+	return null
+}
+
+prod_func = func(address, rc, bt_instance_name) {
+	messages_bt = {}
+	bt_cluster_zone_map = bt_cluster_zone_map_func(address, rc, bt_instance_name)
+	//print("bt_cluster_zone_map:==>" + plan.to_string(bt_cluster_zone_map))
+	cluster_count = 0
+	unique_locations_count = 0
+	locations = []
+	region_array = []
+	unique_region_array = []
+	region_count_map = {}
+	for bt_cluster_zone_map as ad, rt {
+		region_map = strings.split(rt, "-")
+		region = region_map[0] + "-" + region_map[1]
+		append(region_array, region)
+		cluster_count = cluster_count + 1
+		for region_array as add, rtt {
+			if rtt not in unique_region_array {
+				append(unique_region_array, rtt)
+			}
+
+		}
+		if rt not in locations {
+			append(locations, rt)
+			unique_locations_count = unique_locations_count + 1
+		}
+
+	}
+	reg_count = 0
+	for region_array as ll, rr {
+		if rr in region_array {
+			x = region_count_map[rr]
+			is_x_undefined = rule { types.type_of(x) is "undefined" }
+			if is_x_undefined {
+				x = 0
+			}
+			region_count_map[rr] = x + 1
+		}
+	}
+	print("locations :===>" + plan.to_string(locations))
+	print("Cluster Count :===>" + plan.to_string(cluster_count))
+	print("Region Count Map :===>" + plan.to_string(region_count_map))
+
+	if (cluster_count < 4) {
+		print("Please Define minimum 4 clusters for resource : " + address + " For High Availability for PROD Instance")
+		messages_bt[address] = rc
+
+	} else if (cluster_count >= 4) {
+
+		if (length(unique_region_array) < 2) {
+			print("Please Select Minimum 2 regions for clusters for resource : " + address + " For High Availability")
+			print("Your Region counts are :" + plan.to_string(region_count_map))
+			print("And your selected zones are : " + plan.to_string(locations))
+			messages_bt[address] = rc
+		} else {
+			call_allowed_region_function = allowed_region_func(unique_region_array, region_array, messages_bt, address, rc)
+		}
+
+	}
+	return messages_bt
+
+}
+
+non_prod_func = func(address, rc, bt_instance_name) {
+	messages_bt_non_prod = {}
+	bt_cluster_zone_map_non_prod = bt_cluster_zone_map_func(address, rc, bt_instance_name)
+	cluster_count = 0
+	unique_locations_count = 0
+	locations = []
+	region_array = []
+	unique_region_array = []
+	for bt_cluster_zone_map_non_prod as ad, rt {
+		region_map = strings.split(rt, "-")
+		region = region_map[0] + "-" + region_map[1]
+		append(region_array, region)
+		cluster_count = cluster_count + 1
+		if rt not in locations {
+			append(locations, rt)
+			unique_locations_count = unique_locations_count + 1
+		}
+
+	}
+	print("locations :===>" + plan.to_string(locations))
+	print("Unique locations count :===>" + plan.to_string(unique_locations_count))
+	print("Region_Array :===>" + plan.to_string(region_array))
+	print("Cluster Count :===>" + plan.to_string(cluster_count))
+
+	if (cluster_count < 2) {
+		print("Please Define one more cluster for resource : " + address + " For High Availability")
+		messages_bt_non_prod[address] = rc
+	} else if (cluster_count >= 2) {
+		if (cluster_count > unique_locations_count) {
+			print("Please Select different locations for clusters for resource : " + address + " For High Availability")
+			messages_bt_non_prod[address] = rc
+		} else {
+			message_holder = 0
+			for region_array as lpp, rttt {
+				region_arr = strings.split(rttt, "-")
+
+				if region_arr[0] != "us" {
+					message_holder = 1
+					messages_bt_non_prod[address] = rc
+
+				}
+			}
+			if message_holder == 1 {
+				print("Please select \"us-\" region for resource " + address + " For cluster deployments. Zones should be in \"us-\"  region only")
+				print("Your Selected regions are : " + plan.to_string(region_array))
+			}
+		}
+	}
+	return messages_bt_non_prod
+
+}
+msgs = {}
+call_prod_func = {}
+call_non_prod_func = {}
+for allBigtableInstances as address, rc {
+	bt_instance_name = plan.evaluate_attribute(rc, "name")
+	if bigtable_instance_classification_map[bt_instance_name] == "prod" {
+		call_prod_func = prod_func(address, rc, bt_instance_name)
+	} else {
+		call_non_prod_func = non_prod_func(address, rc, bt_instance_name)
+	}
+	msgs = length(call_prod_func) + length(call_non_prod_func) + length(messages_bt_cluster_main)
+}
+
+GCP_BT_HA_PROD_BT_MULTI_ZONE = rule { msgs is 0 }
+main = rule { GCP_BT_HA_PROD_BT_MULTI_ZONE }

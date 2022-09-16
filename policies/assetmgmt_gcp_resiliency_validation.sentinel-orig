@@ -1,0 +1,119 @@
+# This sentinel policy enforces usage of health check and limited ports in load balancer
+# These sentinel policies enforce Wells Fargo security principles
+
+# Import common-functions/tfplan-functions/tfplan-functions.sentinel
+# with alias "plan"
+import "tfplan-functions" as plan
+import "strings"
+import "types"
+
+backendServiceResources = plan.find_resources("google_compute_region_backend_service")
+
+############################## Check for health_checks is enabled in LoadBalancer  ##############################
+
+messages = {}
+for backendServiceResources as address, rc {
+	health_checks = rc["change"]["after"]["health_checks"]
+	if types.type_of(health_checks) is not "undefined" {
+		if health_checks is null {
+			messages[address] = "health_checks Needs to be enabled for google_compute_region_backend_service"
+		}
+	}
+}
+
+############################## Check for all_ports is enabled in LoadBalancer  ##############################
+print(messages)
+GCP_LB_HC = rule { length(messages) is 0 }
+
+###################################################################################################
+############################# APIGEE RULE 2 : GCP_APIGEE_REGION_HA ################################
+###################################################################################################
+
+allApigeeInstances = plan.find_resources("google_apigee_instance")
+allowed_apigee_instance_regions = ["us-central1", "us-east1"]
+
+messages_apigee_instance_consolidated = {}
+messages_apigee_instance_name_prod_map = {}
+for allApigeeInstances as address, rc {
+	instance_name = plan.evaluate_attribute(rc, "name")
+	is_instance_prod = rule {instance_name contains "prod" and instance_name not contains "nonprod"}
+	if is_instance_prod {
+		messages_apigee_instance_name_prod_map[instance_name] = "prod"
+	} else {
+		messages_apigee_instance_name_prod_map[instance_name] = "non-prod"
+	}
+
+}
+print("messages_apigee_instance_name_prod_map :==> " + plan.to_string(messages_apigee_instance_name_prod_map))
+
+count_prod = 0
+prod_instances = []
+for messages_apigee_instance_name_prod_map as add, rt {
+	if rt == "prod" {
+		count_prod = count_prod + 1
+		append(prod_instances, add)
+	}
+}
+
+messages_count_prod = {}
+message_apigee_instance_location = {}
+apigee_instance_name_location_map = {}
+apigee_instance_name_prod_location_map = {}
+if (count_prod < 2 and count_prod != 0) {
+	print("Please create One more Prod Instance for High availibility")
+	messages_count_prod["prod_count"] = "less than 2"
+} else {
+
+	for allApigeeInstances as address, rc {
+		instance_name_apigee = plan.evaluate_attribute(rc, "name")
+		instance_location = plan.evaluate_attribute(rc, "location")
+		apigee_instance_name_location_map[instance_name_apigee] = instance_location
+
+	}
+
+	for apigee_instance_name_location_map as ad, rtt {
+		if (ad in prod_instances) {
+			apigee_instance_name_prod_location_map[ad] = rtt
+		}
+	}
+
+	print("apigee_instance_name_prod_location_map : ==> " + plan.to_string(apigee_instance_name_prod_location_map))
+}
+
+total_instance_count = 0
+location_list = []
+unique_location = 0
+for apigee_instance_name_prod_location_map as address, rc {
+	total_instance_count = total_instance_count + 1
+	if rc not in location_list {
+		append(location_list, rc)
+		unique_location = unique_location + 1
+	}
+
+}
+print("Total Prod Instance Count ==>" + plan.to_string(total_instance_count))
+print("Unique Location ==>" + plan.to_string(unique_location))
+
+messages_instance_prod_main = {}
+for apigee_instance_name_prod_location_map as addr, rcc {
+	if rcc not in allowed_apigee_instance_regions {
+		print(" Please select region from following allowed regions for apigee instance :" + addr)
+		messages_instance_prod_main[addr] = rcc
+	} else {
+		if (total_instance_count >= 2 and unique_location == 1) {
+			print(" Please select different locations for high availability. allowed locations are : " + plan.to_string(allowed_apigee_instance_regions))
+			messages_instance_prod_main[addr] = rcc
+		}
+	}
+}
+
+messages_apigee_instance_consolidated = length(messages_count_prod) + length(message_apigee_instance_location) + length(messages_instance_prod_main)
+
+GCP_APIGEE_REGION_HA = rule { messages_apigee_instance_consolidated is 0 }
+
+
+###################################################################################################
+
+
+
+main = rule { GCP_LB_HC and GCP_APIGEE_REGION_HA }

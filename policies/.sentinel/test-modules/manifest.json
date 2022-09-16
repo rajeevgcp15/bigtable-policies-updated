@@ -1,103 +1,67 @@
 {
 	"records": [
 		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"key": "test/bigtable3/bigtable_prod_region_in_not_allowed_list_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_less_than_4_fail/tfplan-functions",
+			"key": "test/assetmgmt_gcp_resiliency_validation/apigee-instance-location-fail-3/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_nonprod_region_in_not_allowed_list_fail/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_zone_null/tfconfig-functions",
+			"key": "test/bigtable3/bigtable_nonprod_region_in_not_allowed_list_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_pass/tfconfig-functions",
 			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_nonprod_cluster_size_less_than_2_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_less_than_4_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_zone_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable/bigtable_zone_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_less_than_4_fail/tfconfig-functions",
+			"key": "test/bigtable2/bigtable_prod_region_in_not_allowed_list_fail/tfconfig-functions",
 			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_prod_region_in_not_allowed_list_fail/tfplan-functions",
+			"key": "test/bigtable2/bigtable_zone_null/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_nonprod_cluster_size_greater_than_2_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"key": "test/assetmgmt_gcp_resiliency_validation/apigee-instance-location-fail-2/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_region_in_not_allowed_list_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/google_compute_region_backend_service-pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/generic-functions/generic-functions.sentinel"
 		},
 		{
 			"key": "test/bigtable/bigtable_nonprod_cluster_size_greater_than_2_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable/bigtable_prod_region_in_not_allowed_list_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_fail/tfconfig-functions",
-			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable/bigtable_prod_region_in_not_allowed_list_fail/tfconfig-functions",
-			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_pass/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
@@ -109,34 +73,58 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_nonprod_cluster_size_less_than_2_fail/tfconfig-functions",
+			"key": "test/bigtable3/bigtable_nonprod_cluster_size_greater_than_2_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_less_than_4_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_nonprod_cluster_size_less_than_2_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_region_not_allowed_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_nonprod_region_in_not_allowed_list_fail/tfconfig-functions",
 			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_greater_than_4_pass/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_nonprod_cluster_size_less_than_2_fail/tfstate-functions",
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_cluster_size_greater_than_2_pass/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_nonprod_region_in_not_allowed_list_fail/tfplan-functions",
+			"key": "test/assetmgmt_gcp_resiliency_validation/google_compute_region_backend_service-pass/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_less_than_4_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
 			"key": "test/bigtable2/bigtable_nonprod_cluster_size_greater_than_2_pass/tfconfig-functions",
@@ -145,40 +133,46 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_nonprod_cluster_size_less_than_2_fail/tfplan-functions",
+			"key": "test/bigtable/bigtable_nonprod_cluster_size_less_than_2_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/google_compute_region_backend_service-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_cluster_size_less_than_2_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_region_in_not_allowed_list_fail/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_nonprod_cluster_size_greater_than_2_pass/tfplan-functions",
+			"key": "test/bigtable3/bigtable_prod_cluster_size_greater_than_4_fail/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_zone_null/tfplan-functions",
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_cluster_size_greater_than_2_pass/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_fail/tfconfig-functions",
-			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"key": "test/bigtable2/bigtable_nonprod_cluster_size_greater_than_2_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_prod_region_in_not_allowed_list_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_pass/tfconfig-functions",
-			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
 			"key": "test/bigtable/bigtable_nonprod_cluster_size_greater_than_2_pass/tfstate-functions",
@@ -187,37 +181,265 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_region_in_not_allowed_list_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_region_not_allowed_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_cluster_size_greater_than_2_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_less_than_4_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_zone_null/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_less_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_greater_than_4_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_cluster_size_greater_than_2_pass/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_region_not_allowed_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_region_not_allowed_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_less_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_zone_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
 			"key": "test/bigtable/bigtable_zone_null/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_prod_region_in_not_allowed_list_fail/tfconfig-functions",
+			"key": "test/bigtable3/bigtable_zone_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_less_than_4_fail/tfconfig-functions",
 			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_nonprod_cluster_size_greater_than_2_pass/tfconfig-functions",
-			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"key": "test/bigtable/bigtable_zone_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_pass/tfconfig-functions",
-			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_pass/tfstate-functions",
+			"key": "test/bigtable2/bigtable_zone_null/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_prod_cluster_size_less_than_4_fail/tfplan-functions",
+			"key": "test/assetmgmt_gcp_resiliency_validation/google_compute_region_backend_service-fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/apigee-instance-location-fail-1/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_region_not_allowed_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_cluster_size_less_than_4_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_zone_null/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_nonprod_cluster_size_less_than_2_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_nonprod_cluster_size_less_than_2_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_cluster_size_greater_than_4_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/google_compute_region_backend_service-null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_cluster_size_greater_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_region_in_not_allowed_list_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_cluster_size_less_than_2_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_less_than_4_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_nonprod_cluster_size_greater_than_2_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_less_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_greater_than_4_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_region_not_allowed_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_greater_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_cluster_size_less_than_4_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_pass/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
@@ -235,34 +457,34 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_nonprod_region_in_not_allowed_list_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"key": "test/bigtable3/bigtable_prod_region_in_not_allowed_list_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_nonprod_region_in_not_allowed_list_fail/tfconfig-functions",
+			"key": "test/bigtable3/bigtable_prod_cluster_size_greater_than_4_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_zone_null/tfconfig-functions",
 			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_nonprod_region_in_not_allowed_list_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"key": "test/assetmgmt_gcp_resiliency_validation/google_compute_region_backend_service-null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/generic-functions/generic-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable2/bigtable_nonprod_cluster_size_less_than_2_fail/tfconfig-functions",
-			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
-		},
-		{
-			"key": "test/bigtable2/bigtable_nonprod_cluster_size_less_than_2_fail/tfplan-functions",
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_greater_than_4_fail/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
 			"key": "test/bigtable2/bigtable_nonprod_region_in_not_allowed_list_fail/tfconfig-functions",
@@ -271,22 +493,190 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_fail/tfplan-functions",
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_region_not_allowed_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_nonprod_cluster_size_greater_than_2_pass/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_region_in_not_allowed_list_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_nonprod_region_in_not_allowed_list_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_zone_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_region_not_allowed_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/apigee-instance-location-pass-1/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_nonprod_region_in_not_allowed_list_fail/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/bigtable/bigtable_prod_cluster_size_greater_than_4_pass/tfstate-functions",
+			"key": "test/bigtable3/bigtable_nonprod_cluster_size_greater_than_2_pass/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_pass/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_cluster_size_less_than_2_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_cluster_size_less_than_4_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_region_not_allowed_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_cluster_size_greater_than_4_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_cluster_size_less_than_2_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_less_than_4_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_nonprod_region_in_not_allowed_list_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_prod_cluster_size_greater_than_4_pass/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_region_not_allowed_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_cluster_size_less_than_2_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_nonprod_cluster_size_less_than_2_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_nonprod_cluster_size_less_than_2_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_region_not_allowed_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_cluster_size_greater_than_4_pass/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable2/bigtable_nonprod_cluster_size_less_than_2_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable/bigtable_prod_region_in_not_allowed_list_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/apigee-instance-location-pass-2/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_zone_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_resiliency_validation/bigtable_prod_cluster_size_greater_than_4_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		},
 		{
 			"key": "test/bigtable/bigtable_nonprod_region_in_not_allowed_list_fail/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/15sept2022/gcp15/bigtable-policies-updated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/bigtable3/bigtable_prod_region_not_allowed_fail/tfconfig-functions",
+			"source": "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/16sept2022/gcp15/bigtable-policies-updated/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 		}
 	]
 }
