@@ -2,14 +2,14 @@
 
 encryption_gcp_algo_enforce.sentinel
 
-# Following rules have been evaluated"
+# Following rules have been evaluated:
 
 |Rule|Description|
 |----|-----|
 |GCP_CAS_CAENTALG|CMEK Keys used for "enterprise" tier CAs must use one of the allowed encryption algorithms. Allowed algorithms are - ["RSA_SIGN_PSS_2048_SHA256", "RSA_SIGN_PSS_3072_SHA256", "RSA_SIGN_PSS_4096_SHA256", "RSA_SIGN_PKCS1_2048_SHA256", "RSA_SIGN_PKCS1_3072_SHA256", "RSA_SIGN_PKCS1_4096_SHA256"].|
 |GCP_CAS_CADEVOPSALG|DEVOPS tier CAs must use one of the allowed algorithms (Google Managed encryption keys) -  ["RSA_PSS_2048_SHA256", "RSA_PSS_3072_SHA256", "RSA_PSS_4096_SHA256", "RSA_PKCS1_2048_SHA256", "RSA_PKCS1_3072_SHA256", "RSA_PKCS1_4096_SHA256"].|
 
-## Imports 
+## Standard Imports 
 ```
 import "tfstate-functions" as tfstate
 import "tfconfig-functions" as tfconfig
@@ -160,11 +160,11 @@ for array_tfplan_cryptokey as address, rc {
 	array_cryptokey_main[address] = rc
 }
 
-
-
 ```
-##GCP_CAS_CAENTALG     : CMEK Keys used for "enterprise" tier CAs must use one of the allowed encryption algorithms. Allowed algorithms are - ["RSA_SIGN_PSS_2048_SHA256", "RSA_SIGN_PSS_3072_SHA256", "RSA_SIGN_PSS_4096_SHA256", "RSA_SIGN_PKCS1_2048_SHA256", "RSA_SIGN_PKCS1_3072_SHA256", "RSA_SIGN_PKCS1_4096_SHA256"].
+### <b>GCP_CAS_CAENTALG</b>     : CMEK Keys used for "enterprise" tier CAs must use one of the allowed encryption algorithms. Allowed algorithms are - <i><b>["RSA_SIGN_PSS_2048_SHA256", "RSA_SIGN_PSS_3072_SHA256", "RSA_SIGN_PSS_4096_SHA256", "RSA_SIGN_PKCS1_2048_SHA256", "RSA_SIGN_PKCS1_3072_SHA256", "RSA_SIGN_PKCS1_4096_SHA256"].</b></i>
+<br>
 
+<b>The Code Below :</b>
 ```
 b = 0
 c = 0
@@ -223,7 +223,12 @@ for allCertAuthorityInstances as address, rc {
 GCP_CAS_CAENTALG = rule { length(messages_algorithm) is 0 }
 
 ```
-##GCP_CAS_CADEVOPSALG : DEVOPS tier CAs must use one of the allowed algorithms (Google Managed encryption keys) -  ["RSA_PSS_2048_SHA256", "RSA_PSS_3072_SHA256", "RSA_PSS_4096_SHA256", "RSA_PKCS1_2048_SHA256", "RSA_PKCS1_3072_SHA256", "RSA_PKCS1_4096_SHA256"]
+### <b>GCP_CAS_CADEVOPSALG </b>: DEVOPS tier CAs must use one of the allowed algorithms (Google Managed encryption keys) -  <i><b>["RSA_PSS_2048_SHA256", "RSA_PSS_3072_SHA256", "RSA_PSS_4096_SHA256", "RSA_PKCS1_2048_SHA256", "RSA_PKCS1_3072_SHA256", "RSA_PKCS1_4096_SHA256"]</b></i>
+
+<br>
+
+<b>The Code Below :</b>
+
 ```
 #######################################################
 ####--------------DEVOPS RULE-----------------------###
