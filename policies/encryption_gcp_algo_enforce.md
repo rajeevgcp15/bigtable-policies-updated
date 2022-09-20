@@ -3,12 +3,12 @@
 encryption_gcp_algo_enforce.sentinel
 
 # Following rules have been evaluated"
-```
-GCP_CAS_CAENTALG : CMEK Keys used for "enterprise" tier CAs must use one of the allowed encryption algorithms. Allowed algorithms are - ["RSA_SIGN_PSS_2048_SHA256", "RSA_SIGN_PSS_3072_SHA256", "RSA_SIGN_PSS_4096_SHA256", "RSA_SIGN_PKCS1_2048_SHA256", "RSA_SIGN_PKCS1_3072_SHA256", "RSA_SIGN_PKCS1_4096_SHA256"]
 
-GCP_CAS_CADEVOPSALG : DEVOPS tier CAs must use one of the allowed algorithms (Google Managed encryption keys) -  ["RSA_PSS_2048_SHA256", "RSA_PSS_3072_SHA256", "RSA_PSS_4096_SHA256", "RSA_PKCS1_2048_SHA256", "RSA_PKCS1_3072_SHA256", "RSA_PKCS1_4096_SHA256"]
+|Rule|Description|
+|----|-----|
+|GCP_CAS_CAENTALG|CMEK Keys used for "enterprise" tier CAs must use one of the allowed encryption algorithms. Allowed algorithms are - ["RSA_SIGN_PSS_2048_SHA256", "RSA_SIGN_PSS_3072_SHA256", "RSA_SIGN_PSS_4096_SHA256", "RSA_SIGN_PKCS1_2048_SHA256", "RSA_SIGN_PKCS1_3072_SHA256", "RSA_SIGN_PKCS1_4096_SHA256"].|
+|GCP_CAS_CADEVOPSALG|DEVOPS tier CAs must use one of the allowed algorithms (Google Managed encryption keys) -  ["RSA_PSS_2048_SHA256", "RSA_PSS_3072_SHA256", "RSA_PSS_4096_SHA256", "RSA_PKCS1_2048_SHA256", "RSA_PKCS1_3072_SHA256", "RSA_PKCS1_4096_SHA256"].|
 
-```
 ## Imports 
 ```
 import "tfstate-functions" as tfstate
