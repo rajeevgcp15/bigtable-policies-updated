@@ -19,7 +19,7 @@ import "tfplan-functions" as plan
 import "strings"
 import "types"
 ```
-## code to gather details from tfplan and tfconfig and creating different type of maps for evaluation :
+## Code to gather details from tfplan and tfconfig and creating different type of maps for evaluation :
 
 ```
 allCAPoolTfstateInstances = tfstate.find_resources("google_privateca_ca_pool")
@@ -260,8 +260,8 @@ GCP_CAS_CADEVOPSALG = rule { length(messages_algorithm_devops) is 0 }
 
 
 
-## The Main Function
-This function returns "False" if length of violations is not 0.
+## The Main Rule
+This Rule returns "False" if length of violations is not 0.
 
 ```
 
