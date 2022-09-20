@@ -258,10 +258,10 @@ GCP_CAS_CADEVOPSALG = rule { length(messages_algorithm_devops) is 0 }
 ```
 
 
-```
+
 
 ## The Main Function
-This function returns "False" if length of all flag is not 0.
+This function returns "False" if length of violations is not 0.
 
 ```
 
